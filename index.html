@@ -1,64 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta char-"utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-  <title>wazzedo</title>
-  <link rel="stylesheet" href="stylesheet.css"  type="text/css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <!--画像が自動スクロール -->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-function slideSwitch() {
-   var $active = $('#slideshow img.active');
-
-   if ( $active.length == 0 ) $active = $('#slideshow img:last');
-
-   var $next =  $active.next().length ? $active.next()
-      : $('#slideshow img:first');
-
-   $active.addClass('last-active');
-
-   $next.css({opacity: 0.0})
-      .addClass('active')
-      .animate({opacity: 1.0}, 1000, function() {
-           $active.removeClass('active last-active');
-      });
-}
-
-$(function() {
-   setInterval( "slideSwitch()", 3000 );
-});
-</script>
-
-
-  </head>
-  <body>
-    <div id="Awesome" class="anim750">
-
-  <div class="reveal circle_wrapper">
-        <div class="circle">Hello!</div>
-    </div>
-
-    <div class="sticky anim750">
-        <div class="front circle_wrapper anim750">
-            <div class="circle anim750"></div>
-      </div>
-    </div>
-
-  <h4>Peel Me!</h4>
-
-  <div class="sticky anim750">
-        <div class="back circle_wrapper anim750">
-            <div class="circle anim750"></div>
+<head>
+  <meta charset="utf-8">
+  <title>Progate</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  <section class="fullsize-video-bg">
+    <div class="inner">
+        <div>
+            <h1>From kagoshima to the world!</h1>
+            Wazzedo
+      <p>
         </div>
     </div>
-
-</div>
-
-  </body>
+    <div id="video-viewport">
+        <video width="1920" height="1280" autoplay muted loop>
+            <source src="topview.mp4" type="video/mp4" />
+            <source src="" type="video/webm" />
+        </video>
+    </div>
+</section>
+  <script src="script.js"></script>
+</body>
 </html>
